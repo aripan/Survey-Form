@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Linking CSS file to HTML -->
     <link rel="stylesheet" href="surveyform.css">
     <title>Survey Form</title>
 </head>
+
+<!-- This is the main part, which will be visible as a website -->
 <body>
+
     <h1 id="title">Survey Form</h1>
     <p id="description">Thanks a lot for taking time to help us to improve the platform</p>
     <div class="main">
         <br>       
         <form action="survey" id="survey-form">
+
+            <!-- Name, Email, Age -->
             <label for="name" id="name-label">Name:</label>
             <input type="text" id="name" name="name" value="Last name, First name" required> <br><br>
             <label for="email" id="email-label">Email:</label>
@@ -19,8 +26,10 @@
             <label for="number" id="number-label">Age(optional):</label>
             <input type="number" id="number" name="age"  min="1" max="100" value="Value should be equal to or less than 100"><br><br>
         
-
+            <!-- Selecting current role -->
             <label for="current_role" id="current_role-label">Which option best describes your current role?:</label>
+            
+            <!-- Select tag is used to make dropdown -->
             <select name="current_role-label" id="dropdown">
                 <option value="Select current role">Select current role</option>
                 <option value="Student">Student</option>
@@ -31,6 +40,7 @@
             </select>
             <br>
 
+            <!-- Recommending a friend -->
             <div class="recommend">
                 <p>Would you recommend our site to a friend?</p>
                 <input type="radio" id="definitely" name="name" value="definitely" checked>
@@ -40,12 +50,10 @@
                 <input type="radio" id="notsure" name="name" value="notsure">
                 <label for="notsure" id="r-btn">Not sure</label>
             </div>
+            <br>
+            <br>
             
-            <br><br>
-            
-            
-
-
+            <!-- Selecting favourite feature -->
             <label for="select_an_option" id="select_an_option-label">What is your favorite feature of our site?:</label>
             <select name="select_an_option" id="dropdown">
                 <option value="Select an option">Select an option</option>
@@ -56,6 +64,7 @@
             </select>
             <br>
 
+            <!-- Selecting suggested improvements -->
             <p>What would you like to see improved? (Check all that apply)</p>
             <input type="checkbox" id="front" name="front" value="front-end projects" >
             <label for="font">Front-end Projects</label><br>
@@ -80,19 +89,17 @@
             <input type="checkbox" id="additional" name="additional" value="additional courses" >
             <label for="additional">Additional Courses</label><br><br>
             
+            <!-- Comment or suggestion -->
             <p>Any comments or suggestion?</p>            
             <textarea name="comments" id="comments" ></textarea>
-            <br><br>
-            
+            <br>
+            <br>
+
+            <!-- Submit button -->
             <input type="submit" id="submit" class="sb-btn">
-           
-                
-                     
-            
-            <br><br>
+            <br>
+            <br>
         </form>
-    
     </div>
-    
 </body>
 </html>
